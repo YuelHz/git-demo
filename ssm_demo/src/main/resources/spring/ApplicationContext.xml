@@ -10,11 +10,11 @@
         http://www.springframework.org/schema/mvc
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!--将刚才的bean标签配置去掉 改为开启注解扫描-->
-    <context:component-scan base-package="controller"></context:component-scan>
+    <context:component-scan base-package="controller,service,dao"></context:component-scan>
 
     <!-- 上述一堆删掉 添加一个新的配置 开启注解驱动 相当于是加载了HandlerMapping类对象 -->
     <mvc:annotation-driven></mvc:annotation-driven>
 
     <!--配置文件解析器-->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+<!--    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>-->
 </beans>
